@@ -16,8 +16,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
-          username: ${{ env.DOCKER_USERNAME }}
-          password: ${{ env.DOCKER_PASSWORD }}
+          username: ${{ secret.DOCKER_USERNAME }}
+          password: ${{ secret.DOCKER_PASSWORD }}
 
       - name: Pull Docker image
         run: docker pull lhysin/nodejs-cws-change-item-batch:latest
