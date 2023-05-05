@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - nodejs/cws-change-item-batch
-/**
+      - nodejs/cws-change-item-batch/**
 
 permissions:
   contents: read
