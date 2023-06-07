@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: ${{ BITBUCKET_TEST_REPOSITORY_WITH_TOKEN }}
+          repository: ${{ secrets.BITBUCKET_TEST_REPOSITORY_WITH_TOKEN }}
 
       - name: Echo
         run: ls
