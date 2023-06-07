@@ -11,9 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v3
-      - run: |
-          git clone ${{ secrets.BITBUCKET_TEST_REPOSITORY_WITH_TOKEN }}
+        uses: actions/checkout@v3
+
+      - name: Clone repository
+        run: git clone ${{ secrets.BITBUCKET_TEST_REPOSITORY_WITH_TOKEN }} <지정한_경로>
 
       - name: Echo
         run: ls
