@@ -1,0 +1,19 @@
+name: build-and-deploy-private
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ BITBUCKET_TEST_REPOSITORY_WITH_TOKEN }}
+
+      - name: Echo
+        run: ls
